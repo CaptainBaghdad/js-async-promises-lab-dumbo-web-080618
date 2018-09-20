@@ -5,3 +5,42 @@ const questions = [
 ]
 
 let question;
+
+
+
+ function appendQuestion(question){
+  let container = document.querySelector('.question-container')
+  container.innerHTML = question.questionText;
+}
+  
+  function askQuestionThen(time){
+    
+       question  = questions[0];
+       
+       appendQuestion(question);
+       return new Promise(res => {
+         
+       })
+       
+       
+  }
+  
+  
+  function removeQuestion(){
+    let container = document.querySelector('.question-container')
+  container.innerHTML = "";
+    
+  }
+  
+  function askQuestionThenRemoveQuestion(time){
+    let container = document.querySelector('.question-container')
+  container.innerHTML = question.questionText;
+    
+   var myVar = setInterval(removeQuestion, time);
+    
+    
+  }
+  
+  
+  
+
